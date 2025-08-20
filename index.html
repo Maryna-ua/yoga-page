@@ -30,20 +30,31 @@
         img {
             display: block;
             margin: 5px auto;
-            width: 70%; 
+           
             
         }
         .intro-picture {
+        width: 100%;
           border-radius: 5px;
           transition: all 150ms ease-in-out;
         }
 .intro-picture:hover {
-transform: scale(1.2);
-filter: brightness(0.9);
+transform: scale(1.01);
+transform: ;
+filter: brightness(1.1);
 }
-
+.grid{
+    margin: 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+.grid img {
+    width: 100%;
+}
 p {
     padding: 15px;
+    line-height: 1.5;
 }
         button { display: block;
             margin: 20px auto;
@@ -85,11 +96,12 @@ p {
     <h1>YOGA</h1>
     <h2>Ommm Shanti Ommm</h2>
     <img class="intro-picture" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/510/original/yoga_paradise.jpg?1755688944" alt="yoga intro picture" >
-     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/511/original/yoga1.jpg?1755688955" alt="yoga picture 1">
+     <div class="grid"><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/511/original/yoga1.jpg?1755688955" alt="yoga picture 1">
       <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/512/original/yoga2.jpg?1755688962" alt="yoga picture 2">
        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/513/original/yoga3.jpg?1755688970" alt="yoga picture 3">
         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/514/original/yoga4.jpg?1755688981" alt="yoga picture 4">
-<p>Yoga is an ancient Indian practice that combines physical postures, breathing exercises, and meditation to promote physical and mental well-being. The word "yoga" is derived from Sanskrit and means "to unite," symbolizing the union of body, mind, and spirit. Regular yoga practice can improve strength, flexibility, and balance, while also reducing stress and promoting relaxation.</p>
+</div>
+        <p>Yoga is an ancient Indian practice that combines physical postures, breathing exercises, and meditation to promote physical and mental well-being. The word "yoga" is derived from Sanskrit and means "to unite," symbolizing the union of body, mind, and spirit. Regular yoga practice can improve strength, flexibility, and balance, while also reducing stress and promoting relaxation.</p>
 <button class="practice">Practice Yoga</button>
 <h3>Namaste</h3>
 </div>
