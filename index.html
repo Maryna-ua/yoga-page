@@ -39,14 +39,13 @@
           transition: all 150ms ease-in-out;
         }
 .intro-picture:hover {
-transform: scale(1.01);
-transform: ;
+transform: scale(1.03);
 filter: brightness(1.1);
 }
 .grid{
     margin: 15px 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 10px;
 }
 .grid img {
@@ -56,18 +55,21 @@ p {
     padding: 15px;
     line-height: 1.5;
 }
-        button { display: block;
+        button { 
+            display: block;
             margin: 20px auto;
             padding: 10px 20px;
+        
             font-size: 18px;
+            border: 1px solid white;
          border-radius: 4px;
          transition: all 150ms ease-in-out;
         }
-        .theme {
+        .theme-button {
             background-color: black;
             color: white
         }
-        .theme:hover {
+        .theme-button:hover {
             background-color:white ;
             color: black;
         }
@@ -82,6 +84,20 @@ p {
         
             cursor: pointer;
         }
+        .dark { 
+            background-color: black;
+            color: white;
+        }
+        .dark .container {
+            background-color: rgba(50, 50, 50, 0.5);
+        }
+.dark button {
+    background-color: black;
+    color: white;
+}
+.dark a {
+    color: white;
+}
         footer {
             text-align: center;
             font-size: 16px;
@@ -90,11 +106,11 @@ p {
         }
     </style>
 </head>
-<body>
-    <button class="theme">Dark theme</button>
+<body >
+    <button class="theme-button">Change theme</button>
     <div class="container">
     <h1>YOGA</h1>
-    <h2>Ommm Shanti Ommm</h2>
+    <h2>Shanti</h2>
     <img class="intro-picture" src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/510/original/yoga_paradise.jpg?1755688944" alt="yoga intro picture" >
      <div class="grid"><img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/511/original/yoga1.jpg?1755688955" alt="yoga picture 1">
       <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/512/original/yoga2.jpg?1755688962" alt="yoga picture 2">
@@ -102,9 +118,18 @@ p {
         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/514/original/yoga4.jpg?1755688981" alt="yoga picture 4">
 </div>
         <p>Yoga is an ancient Indian practice that combines physical postures, breathing exercises, and meditation to promote physical and mental well-being. The word "yoga" is derived from Sanskrit and means "to unite," symbolizing the union of body, mind, and spirit. Regular yoga practice can improve strength, flexibility, and balance, while also reducing stress and promoting relaxation.</p>
-<button class="practice">Practice Yoga</button>
+<button class="practice-button">Practice Yoga</button>
 <h3>Namaste</h3>
 </div>
-<footer>Coded by Maryna</footer></body>
+<footer>Coded with peace by <a href="https://github.com/Maryna-ua" target="_blank">Maryna</a></footer>
+<script>
+    function changeTheme() {
+    let body=document.querySelector("body");
+    body.classList.add("dark");
+}
+    let themeButton= document.querySelector(".theme-button");
+    themeButton.addEventListener("click", changeTheme);
+</script>
+</body>
 
 </html>
