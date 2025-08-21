@@ -6,7 +6,7 @@
     <title>Yoga page</title>
     <style>
            body {
-            background-color: rgb(234, 226, 234);
+         background: linear-gradient(to top, #dad4ec 0%, #dad4ec 1%, #f3e7e9 100%);
         }
          .container {
             width: 60%;
@@ -85,7 +85,7 @@ p {
             cursor: pointer;
         }
         .dark { 
-            background-color: black;
+           background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
             color: white;
         }
         .dark .container {
@@ -118,7 +118,7 @@ p {
         <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/172/514/original/yoga4.jpg?1755688981" alt="yoga picture 4">
 </div>
         <p>Yoga is an ancient Indian practice that combines physical postures, breathing exercises, and meditation to promote physical and mental well-being. The word "yoga" is derived from Sanskrit and means "to unite," symbolizing the union of body, mind, and spirit. Regular yoga practice can improve strength, flexibility, and balance, while also reducing stress and promoting relaxation.</p>
-<button class="practice-button">Practice Yoga</button>
+<button class="practice-button" id="mail-to-practice">Practice Yoga</button>
 <h3>Namaste</h3>
 </div>
 <footer>Coded with peace by <a href="https://github.com/Maryna-ua" target="_blank">Maryna</a></footer>
@@ -131,6 +131,10 @@ body.classList.toggle("dark");
 
     let themeButton= document.querySelector(".theme-button");
     themeButton.addEventListener("click", changeTheme);
+    
+     document.getElementById("mail-to-practice").onclick = function() {
+            window.location.href = 'mailto:kodola.marina@gmail.com?subject=Subject&body=Hello, this is the body of the email!';
+        };
 </script>
 </body>
 
